@@ -3,7 +3,7 @@ package com.inttao.npi.backend.util.service;
 import com.inttao.npi.backend.util.domain.AbstractEntity;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.*;
 
@@ -14,25 +14,20 @@ public interface CrudService <T extends AbstractEntity, I> extends ICrudService<
 	default T get(I id) {
 		return load(id);
 	}
-	@Transactional
 	default T create(T e) {
 		return save(e);
 	}
-	@Transactional
 	default T update(I id, T e) {
 		return save(e);
 	}
-	@Transactional
 	default T save(T entity) {
 		return getRepository().save(entity);
 	}
-	@Transactional
 	default void delete(T entity)  {
 		if (entity == null)
 			throw new EntityNotFoundException();
 		getRepository().delete(entity);
 	}
-	@Transactional
 	default void delete(I id) {
 		delete(load(id));
 	}
@@ -56,7 +51,6 @@ public interface CrudService <T extends AbstractEntity, I> extends ICrudService<
 		return ret;
 	}
 	T createNew();
-	@Transactional
 	default Iterable<T> saveAll(Iterable<T> entities) {
 		return getRepository().saveAll(entities);
 	}

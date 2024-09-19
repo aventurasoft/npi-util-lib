@@ -2,14 +2,14 @@ package com.inttao.npi.backend.util.controller;
 
 
 import com.inttao.npi.backend.util.EntityMapper;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface ICrudControllerUsingRepository<E, DTO, ID>  {
-    JpaRepository<E, ID> getRepository();
+    ListCrudRepository<E, ID> getRepository();
     EntityMapper<DTO, E> getMapper();
 
 

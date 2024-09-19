@@ -10,8 +10,8 @@
     </parent>
     <packaging>jar</packaging>
     <artifactId>npi-util-lib</artifactId>
-    <groupId>com.inttao.npi</groupId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.inttao.npi.backend.util</groupId>
+    <version>1.1-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>

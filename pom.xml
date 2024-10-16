@@ -7,7 +7,7 @@
     <packaging>jar</packaging>
     <groupId>com.inttao.npi.backend.util</groupId>
     <artifactId>npi-util-lib</artifactId>
-    <version>1.5-SNAPSHOT</version>
+    <version>1.6-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>

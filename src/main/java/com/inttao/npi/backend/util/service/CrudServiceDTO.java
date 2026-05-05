@@ -5,6 +5,7 @@ import com.inttao.npi.backend.util.domain.AbstractEntity;
 import com.inttao.npi.backend.util.exceptions.ResourceNotFoundException;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CrudServiceDTO <E extends AbstractEntity<ID>, DTO, ID>  {
     CrudService<E, ID> getService();
@@ -49,5 +50,7 @@ public interface CrudServiceDTO <E extends AbstractEntity<ID>, DTO, ID>  {
     default List<DTO> search(String search) {
         return this.getAll();
     }
+
+
 
 }

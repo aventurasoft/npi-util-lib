@@ -53,4 +53,5 @@ public interface ICrudControllerUsingService<E extends AbstractEntity<ID>, DTO, 
         return this.getAll();
     }
 
+
 }
